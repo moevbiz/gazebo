@@ -19,6 +19,7 @@
   "homepage": "https://github.com/moevbiz/gazebo#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "liquidjs": "^9.4.2",
     "nodemon": "^2.0.0"
   }
 }
