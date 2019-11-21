@@ -1,0 +1,103 @@
+a, p, li, figcaption {
+  font-family: "EB Garamond", serif;
+}
+
+body {
+  margin: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  margin-right: 5px;
+}
+
+nav a:hover,
+a.current {
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  align-items: end;
+}
+
+figure {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  min-width: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+figure:focus {
+  grid-column: span 2;
+}
+
+figure:not(:focus):hover figcaption {
+  max-width: calc(100% - 20px);
+}
+
+figure:not(:focus):hover figcaption:after{
+  content:"●";
+  position: absolute;
+  right: 0;
+  color: #999;
+}
+
+figure.wide:focus {
+  grid-column: span 3;
+}
+
+figure:focus span {
+  display: block;
+}
+
+figure img {
+  width: 100%;
+  border: 0;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
+figcaption {
+  margin: .5em 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+figcaption span {
+  display: none;
+  float: right;
+  color: #999;
+}
+
+sup {
+  vertical-align: super;
+  font-size: .45em;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure.wide:focus {
+    grid-column: span 2;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "gazebo-node",
+  "version": "1.0.0",
+  "description": "'public pavilion biennial'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moevbiz/gazebo.git"
+  },
+  "author": "Bruno Mokross",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moevbiz/gazebo/issues"
+  },
+  "homepage": "https://github.com/moevbiz/gazebo#readme"
+}
