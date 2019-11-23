@@ -6,18 +6,32 @@ const app = express()
 const PORT = process.env.PORT || 3000
 const dir =  process.cwd(); // cwd
 
+const content = path.join(__dirname, '/content')
+const gazebos = []
+
+fs.readdir(content, (err, files) => {
+    if (err) throw err
+    files.forEach(file => {
+        try {
+            gazebos.push(file)
+        }
+        catch(e) {
+            console.log(e)
+        }
+    })
+})
+
 //slug
 app.get ('/content/:slug', (req, res) => {
     let slug = req.params.slug || '';
-    let imgFolder;
+    let data = [];
 
-    if (slug) {
-        imgFolder = path.join(__dirname, req.originalUrl, '/images/')
+    if (slug && gazebos.includes(slug)) {
+        let imgFolder = path.join(__dirname, req.originalUrl, '/images/')
+        browse(imgFolder, 'images');
+    } else {
+        res.send('nothing here')
     };
-
-    var data = [];
-
-    browse(imgFolder, 'images');
 
     function browse(url, arrayName) {
         fs.readdir(url, (err, files) => {
