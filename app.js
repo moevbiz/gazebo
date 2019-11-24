@@ -33,7 +33,7 @@ function render(thisGazebo, req, res) {
             try {
                 data.push({
                     'name': file,
-                    'path': path.join(imgFolder, file),
+                    'path': path.join('content/', thisGazebo, '/images', file),
                     'ext': path.extname(file),
                 })
             }
@@ -55,6 +55,7 @@ app.get('/', (req, res) => {
     render(gzb, req, res)
 })
 
+//slug
 app.get('/:slug', (req, res) => {
     let slug = req.params.slug;
     if (gazebos.includes(slug)) {
@@ -64,6 +65,12 @@ app.get('/:slug', (req, res) => {
         res.render('error');
     }
 })
+
+//serve images
+app.get('/content/:slug/images/:img', function (req, res) {
+    let filepath = path.join(__dirname, '/content/', req.params.slug, '/images/', req.params.img)
+    res.sendFile(filepath);
+});
 
 //slug
 // app.get ('/:slug', (req, res) => {
@@ -101,7 +108,7 @@ app.get('/:slug', (req, res) => {
 // })
 
 // static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`)

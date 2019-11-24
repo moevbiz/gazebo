@@ -4,8 +4,6 @@ html
   body
     h1= title
 
-    h2= check
-
     ul
       each gazebo in gazebos
         a(href=gazebo)
@@ -13,4 +11,4 @@ html
 
     ul
       each image in images
-        li= image.name
+        img(src=image.path)
