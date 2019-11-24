@@ -29,7 +29,6 @@ app.get ('/content/:slug', (req, res) => {
         let imgFolder = path.join(__dirname, req.originalUrl, '/images/')
         let data = [];
         browse(imgFolder, 'images', data)
-        res.send(data);
     } else {
         res.send('nothing here')
     };
@@ -51,6 +50,7 @@ app.get ('/content/:slug', (req, res) => {
                 }
             })
             data.push({[arrayName]: thisData})
+            res.send(data);
         })
     }
 
