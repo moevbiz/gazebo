@@ -24,31 +24,33 @@ fs.readdir(content, (err, files) => {
 //slug
 app.get ('/content/:slug', (req, res) => {
     let slug = req.params.slug || '';
-    let data = [];
 
     if (slug && gazebos.includes(slug)) {
         let imgFolder = path.join(__dirname, req.originalUrl, '/images/')
-        browse(imgFolder, 'images');
+        let data = [];
+        browse(imgFolder, 'images', data)
+        res.send(data);
     } else {
         res.send('nothing here')
     };
 
-    function browse(url, arrayName) {
+    function browse(url, arrayName, data) {
+        let thisData = [];
         fs.readdir(url, (err, files) => {
-            console.log("browsing", url);
             if (err) throw err
             files.forEach(file => {
                 try {
-                    data.push({
+                    thisData.push({
                         'name': file,
-                        'path': path.join(url, file)
+                        'path': path.join(url, file),
+                        'ext': path.extname(file),
                     })
                 }
                 catch(e) {
                     console.log(e)
                 }
             })
-            res.send(data)
+            data.push({[arrayName]: thisData})
         })
     }
 
