@@ -1,4 +1,6 @@
-a, p, li, figcaption {
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+
+* {
   font-family: "EB Garamond", serif;
 }
 
@@ -68,7 +70,6 @@ figure img {
   border: 0;
   height: auto;
   display: block;
-  vertical-align: top;
 }
 
 figcaption {

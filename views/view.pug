@@ -1,14 +1,18 @@
 html
-  head
-    title= title
+  include includes/head.pug
+
   body
     h1= title
 
-    ul
-      each gazebo in gazebos
-        a(href=gazebo)
-          li= gazebo
+    nav
+      ul
+        each gazebo in gazebos
+          a(href=gazebo)
+            li= gazebo
+      
+        main
 
-    ul
-      each image in images
-        img(src=image.path)
+          each image in images
+            figure(tabindex=0)
+              img(src=image.path)
+              figcaption= image.name
