@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+  body
+    h1= title
+
+    h2= check
+
+    ul
+      each gazebo in gazebos
+        a(href=gazebo)
+          li= gazebo
+
+    ul
+      each image in images
+        li= image.name
