@@ -1,18 +1,18 @@
 html
   include includes/head.pug
 
-  body
-    h1= title
-
-    nav
-      ul
-        each gazebo in gazebos
-          a(href=gazebo)
+  nav
+    ul
+      each gazebo in gazebos
+        a(href=gazebo)
+          if gazebo == title
+            li(class='red')= gazebo
+          else
             li= gazebo
-      
-        main
+    
+      main
 
-          each image in images
-            figure(tabindex=0)
-              img(src=image.path)
-              figcaption= image.name
+        each image in images
+          figure(tabindex=0)
+            img(src=image.path)
+            figcaption= image.name

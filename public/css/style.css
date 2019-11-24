@@ -8,6 +8,12 @@ body {
   margin: 10px;
 }
 
+nav li {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
 nav a {
   text-decoration: none;
   color: #000;
@@ -15,6 +21,7 @@ nav a {
 }
 
 nav a:hover,
+.red,
 a.current {
   color: red;
 }
@@ -44,17 +51,11 @@ figure {
 
 figure:focus {
   grid-column: span 2;
+  color: red;
 }
 
 figure:not(:focus):hover figcaption {
-  max-width: calc(100% - 20px);
-}
-
-figure:not(:focus):hover figcaption:after{
-  content:"●";
-  position: absolute;
-  right: 0;
-  color: #999;
+  color: red
 }
 
 figure.wide:focus {
