@@ -1,0 +1,29 @@
+date: 2016-07-31 19:00-00:00
+location: 51°20'04.5"N 12°20'37.5"E
+loc-link: https://goo.gl/maps/p1bQpGeMggR2
+artists:
+  - Aline Sofie Rainer
+  - Bernhard Heuser
+  - Dan Vogt
+  - Judith Gerke
+  - Julian-Jakob Kneer
+  - Julija Zaharijević
+  - Laurids Oder
+  - Niklas Büscher
+  - Victor Lizana
+weather:
+    # - '12:00'
+    - 25 / 22 °C
+    - Passing clouds.
+    - 'Humidity: 55%'
+    - 'Barometer: 1011 mbar'
+    - W
+    - 'Wind: 15 km/h'
+    # - '18:00'
+    # - 23 / 16 °C
+    # - Snow flurries. Overcast.
+    # - 'Humidity: 81%'
+    # - 'Barometer: 1013 mbar'
+    # - NW
+    # - 'Wind: 18 km/h'
+    # - '24:00'
