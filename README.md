@@ -1,2 +1,8 @@
-# gazebo
-exhibitions in public pavilions
+# 🏛
+exhibitions in public pavilions.
+
+### todos
+- add exhibition data (artist list, weather)
+- favicon
+- lazyloading
+- thumbnails
