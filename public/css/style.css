@@ -29,6 +29,7 @@ a.current {
 ul {
   list-style-type: none;
   padding: 0;
+  margin-block-start: 0;
 }
 
 main {
@@ -85,13 +86,6 @@ figcaption span {
   display: none;
   float: right;
   color: #999;
-}
-
-sup {
-  vertical-align: super;
-  font-size: .45em;
-  font-weight: 600;
-  text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
