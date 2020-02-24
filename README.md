@@ -6,3 +6,4 @@ exhibitions in public pavilions.
 - favicon
 - lazyloading
 - thumbnails
+- image width and height
