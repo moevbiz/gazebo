@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/moevbiz/gazebo/issues"
   },
-  "homepage": "https://github.com/moevbiz/gazebo#readme",
+  "homepage": "https://gazebo.site",
   "dependencies": {
     "core-js": "^3.4.2",
     "express": "^4.17.1",
